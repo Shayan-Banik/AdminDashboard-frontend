@@ -2,8 +2,8 @@ import { Bell, ChevronDown, Filter, Menu, Moon, Plus, Search, Settings, Sun } fr
 const Header = ({onToggleSidebar}) => {
 
   return (
-    <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-700/50 px-6 py-5 ">
-      <div className="flex items-center justify-between ">
+    <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-700/50 px-3 sm:px-6 py-3 sm:py-4 ">
+      <div className="flex items-center justify-between gap-3 sm:gap-4">
         <div className="left flex items-center space-x-4">
           <button 
           onClick={onToggleSidebar}
@@ -17,17 +17,6 @@ const Header = ({onToggleSidebar}) => {
             <p className="text-sm text-slate-500 dark:text-slate-400 ">
               Welcome back, John! here's happening today
             </p>
-          </div>
-        </div>
-        <div className="flex-1 max-w-md  mx-8 hidden sm:block ">
-          <div className="relative w-full ">
-            <Search className="w-5 h-5 absolute left-2 top-1/2 transform -translate-y-1/2 text-slate-400 " />
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full pl-8 pr-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 "
-            />
-            <Filter className="w-5 h-5 absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 cursor-pointer hover:text-slate-600 dark:hover:text-slate-300 " />
           </div>
         </div>
         <div className="flex items-center space-x-2 sm:space-x-3">

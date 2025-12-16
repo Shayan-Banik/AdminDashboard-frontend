@@ -45,9 +45,9 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const RevenueChart = () => {
   return (
-    <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-200/50 dark:border-slate-700/50 p-6">
+    <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-200/50 dark:border-slate-700/50 p-4 sm:p-6">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-4 sm:mb-6">
         <div>
           <h3 className="text-xl font-bold text-slate-800 dark:text-white">
             Revenue Chart

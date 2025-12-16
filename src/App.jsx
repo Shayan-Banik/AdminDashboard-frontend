@@ -33,8 +33,10 @@ const App = ({children}) => {
               }
             }}
           />
-          <main className="flex-1 overflow-y-auto p-3 sm:p-6 bg-transparent text-white">
-            {activePage === "dashboard" && <Dashboard />}
+          <main className="flex-1 overflow-y-auto p-2 sm:p-4 lg:p-6 bg-transparent text-white">
+            <div className="max-w-full lg:max-w-7xl mx-auto">
+              {activePage === "dashboard" && <Dashboard />}
+            </div>
           </main>
         </div>
       </div>
