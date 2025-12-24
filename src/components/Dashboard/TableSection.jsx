@@ -90,7 +90,7 @@ const topProducts = [
     sales: 1240,
     revenue: "$2.48M",
     change: "+12%",
-    trend: "up"
+    trend: "up",
   },
   {
     id: 2,
@@ -98,7 +98,7 @@ const topProducts = [
     sales: 2180,
     revenue: "$2.83M",
     change: "+18%",
-    trend: "up"
+    trend: "up",
   },
   {
     id: 3,
@@ -106,7 +106,7 @@ const topProducts = [
     sales: 980,
     revenue: "$1.07M",
     change: "-6%",
-    trend: "down"
+    trend: "down",
   },
   {
     id: 5,
@@ -114,7 +114,7 @@ const topProducts = [
     sales: 1420,
     revenue: "$1.70M",
     change: "+14%",
-    trend: "up"
+    trend: "up",
   },
   {
     id: 6,
@@ -122,7 +122,7 @@ const topProducts = [
     sales: 1950,
     revenue: "$487K",
     change: "-4%",
-    trend: "down"
+    trend: "down",
   },
   {
     id: 7,
@@ -130,7 +130,7 @@ const topProducts = [
     sales: 640,
     revenue: "$959K",
     change: "+7%",
-    trend: "up"
+    trend: "up",
   },
   {
     id: 9,
@@ -138,7 +138,7 @@ const topProducts = [
     sales: 410,
     revenue: "$656K",
     change: "-3%",
-    trend: "down"
+    trend: "down",
   },
   {
     id: 10,
@@ -146,7 +146,7 @@ const topProducts = [
     sales: 1320,
     revenue: "$263K",
     change: "+5%",
-    trend: "up"
+    trend: "up",
   },
 ];
 
@@ -231,7 +231,7 @@ const TableSection = () => {
                   </td>
                   <td className="p-4">
                     <span
-                      className={`text-xs w-full px-3 py-1 text-slate-400 dark:text-white font-medium rounded-full ${getStatusColor(
+                      className={`text-[5px]  md:text-[9px]  w-full px-3 py-1 text-slate-400 dark:text-white md:font-medium rounded-full ${getStatusColor(
                         order.status
                       )}`}>
                       {order.date}
@@ -280,7 +280,9 @@ const TableSection = () => {
                 </p>
               </div>
               <div className="text-right">
-                <p className="text-sm font-semibold text-slate-600 dark:text-white">{product.revenue}</p>
+                <p className="text-sm font-semibold text-slate-600 dark:text-white">
+                  {product.revenue}
+                </p>
                 <div className="flex items-center space-x-1">
                   {product.trend === "up" ? (
                     <TrendingUp className="w-3 h-3 text-emerald-500" />
@@ -288,7 +290,9 @@ const TableSection = () => {
                     <TrendingDown className="w-3 h-3 text-red-500" />
                   )}
 
-                  <span className="text-slate-600 dark:text-white">{product.change}</span>
+                  <span className="text-slate-600 dark:text-white">
+                    {product.change}
+                  </span>
                 </div>
               </div>
             </div>

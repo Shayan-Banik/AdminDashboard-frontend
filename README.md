@@ -22,7 +22,7 @@ Perfect for SaaS applications, internal tools, analytics panels, and dashboards.
 
 🎨 **Modern UI/UX**
 - Clean, professional design
-- Dark mode support (theme toggle ready)
+- Dark mode support (theme toggle ready) -> @custom-variant dark (&:where(.dark, .dark *));
 - Smooth animations and transitions
 - Accessible components with proper spacing
 

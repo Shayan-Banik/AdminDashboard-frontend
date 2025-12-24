@@ -1,17 +1,29 @@
-import { Bell, ChevronDown, Filter, Menu, Moon, Plus, Search, Settings, Sun } from "lucide-react";
-const Header = ({onToggleSidebar}) => {
+import {
+  Bell,
+  ChevronDown,
+  Filter,
+  Menu,
+  Moon,
+  Plus,
+  Search,
+  Settings,
+  Sun,
+} from "lucide-react";
+import { useTheme } from "../../context/ThemeContext";
 
+const Header = ({ onToggleSidebar }) => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-700/50 px-3 sm:px-6 py-3 sm:py-4 ">
       <div className="flex items-center justify-between gap-3 sm:gap-4">
         <div className="left flex items-center space-x-4">
-          <button 
-          onClick={onToggleSidebar}
-           className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors ">
+          <button
+            onClick={onToggleSidebar}
+            className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors ">
             <Menu className="w-6 h-6" />
           </button>
           <div className="hidden md:block">
-            <h1 className="text-2xl font-bold text-slate-800 dark:text-white ">
+            <h1 className=" text-2xl font-bold text-slate-800 dark:text-white ">
               Dashboard
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 ">
@@ -24,12 +36,20 @@ const Header = ({onToggleSidebar}) => {
             <Plus className="w-5 h-5" />
             <span className="text-sm font-bold ">New</span>
           </button>
-          <button  className=" text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors">
-            <Sun className="w-6 h-6" />
+          <button
+            onClick={toggleTheme}
+            className=" text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors cursor-pointer">
+            {theme === "dark" ? (
+              <Sun className="w-6 h-6" />
+            ) : (
+              <Moon className="w-6 h-6" />
+            )}
           </button>
-          <button  className="relative text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors  ">
-           <Bell className="w-6 h-6" />
-            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-white flex items-center justify-center border-2 border-white dark:border-slate-900 text-xs">2</span>
+          <button className="relative text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors  ">
+            <Bell className="w-6 h-6" />
+            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-white flex items-center justify-center border-2 border-white dark:border-slate-900 text-xs">
+              2
+            </span>
           </button>
           <button className=" hidden sm:inline text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors  ">
             <Settings className="w-6 h-6 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors  " />
@@ -41,8 +61,12 @@ const Header = ({onToggleSidebar}) => {
               className="w-10 h-10 rounded-full object-cover "
             />
             <div className="hidden md:block">
-                <p className="text-sm text-slate-800 dark:text-white ml-2 ">John Doe</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Administrator</p>
+              <p className="text-sm text-slate-800 dark:text-white ml-2 ">
+                John Doe
+              </p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Administrator
+              </p>
             </div>
             <ChevronDown className="w-4 h-4 text-slate-600 dark:text-slate-300 " />
           </div>
